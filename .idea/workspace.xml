@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ce73b4b-e730-49ed-b2a0-1fdedb33b71d" name="Changes" comment="Тест" />
+    <list default="true" id="2ce73b4b-e730-49ed-b2a0-1fdedb33b71d" name="Changes" comment="Тест">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,12 +23,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/SmartSite" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/smartestkoder-glitch/SmartSite",
-    "accountId": "24f80b58-0544-4c3e-ae82-0d962b631fb8"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;smartestkoder-glitch&quot;
   }
-}]]></component>
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/smartestkoder-glitch/SmartSite&quot;,
+    &quot;accountId&quot;: &quot;24f80b58-0544-4c3e-ae82-0d962b631fb8&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -67,7 +75,8 @@
       <updated>1757586468997</updated>
       <workItem from="1757586470178" duration="1133000" />
       <workItem from="1757602305282" duration="1975000" />
-      <workItem from="1757605709627" duration="778000" />
+      <workItem from="1757605709627" duration="1246000" />
+      <workItem from="1757607845809" duration="13000" />
     </task>
     <task id="LOCAL-00001" summary="Тест">
       <option name="closed" value="true" />

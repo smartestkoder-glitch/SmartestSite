@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Загаловок</title>
+</head>
+<body>
+
+<header>Тэг header<br></header>
+
+<h1>Тэг h1<br></h1>
+
+<span>Тэг span<br></span>
+
+<p>Тэг p<br></p>
+
+<ul>
+
+    <li>Крутой список</li>
+    <li>Через ul</li>
+    <li>Йоу</li>
+
+</ul>
+
+<ol>
+
+    <li>Крутой список</li>
+    <li>Через ol</li>
+    <li>Йоу</li>
+
+</ol>
+
+
+<form action="/submit" method="POST">
+    <label>Email</label>
+
+    <input type="text" name="username" placeholder="Введите имя">
+
+    <label>Пароль</label>
+
+    <input type="password">
+    <input type="email" name="email">
+    <input type="number" name="age">
+    <input type="date" name="birthday">
+    <button>Войти</button>
+
+
+    <input type="checkbox" name="subscribe"> Подписаться
+    <input type="checkbox" name="subscribe"> Подписаться
+    <input type="radio" name="gender" value="male"> Мужчина
+    <input type="radio" name="gender" value="female"> Женщина
+
+    <label>Город<br></label>
+
+    <select name="city">
+        <option>Москва</option>
+        <option>Казань</option>
+        <option>СПб</option>
+    </select>
+
+    <textarea name="comment" rows="4"></textarea>
+
+    <button type="submit">Отправить</button>
+    <button type="reset">Очистить</button>
+    <!-- элементы формы -->
+</form>
+<button type="submit" class="btn btn-primary">Отправить</button>
+
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>Имя</th>
+        <th>Возраст</th>
+        <th>Страна</th>
+        <th>th</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td>Семён</td>
+        <td>12</td>
+        <td>Россия</td>
+        <td>td</td>
+    </tr>
+    </tbody>
+
+    <tbody>
+    <tr>
+        <td>Ростик</td>
+        <td>22</td>
+        <td>Армения</td>
+        <td>td</td>
+    </tr>
+    </tbody>
+
+    <tfoot>
+    <tr>
+        <!--<td>Много</td>-->
+        <td>44</td>
+        <td>футер</td>
+        <td colspan="2">td</td>
+
+    </tr>
+    </tfoot>
+</table>
+
+</body>
+</html>
