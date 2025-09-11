@@ -1,0 +1,47 @@
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+}
+
+.sidebar {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.content {
+    padding: 30px;
+}
+
+/* Карусель (для projects.html) */
+.carousel-item img {
+    width: 700px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Контейнер с контактами */
+.contact-box {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    max-width: 500px;
+}
+.profile-img {
+    max-width: 350px;
+    height: auto;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.contact-link {
+    color: #ffcc00;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+    color: #ffd633;
+}
