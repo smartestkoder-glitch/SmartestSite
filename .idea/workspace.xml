@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2ce73b4b-e730-49ed-b2a0-1fdedb33b71d" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/SmartSite/Portfolio/projects.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmartSite" beforeDir="false" afterPath="$PROJECT_DIR$/SmartSite" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SmartSite/Portfolio/Главная.html" beforeDir="false" afterPath="$PROJECT_DIR$/SmartSite/Portfolio/Главная.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SmartSite/Portfolio/Контакты.html" beforeDir="false" afterPath="$PROJECT_DIR$/SmartSite/Portfolio/Контакты.html" afterDir="false" />
     </list>
@@ -26,9 +26,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/SmartSite" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="32Y97BTaYH0HiNn0uyafseV0I94" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -45,6 +45,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "C:/Users/dravl/AppData/Roaming/JetBrains/WebStorm2025.1/node/versions/22.19.0/node",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -63,11 +64,35 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757586468997</updated>
-      <workItem from="1757586470178" duration="679000" />
+      <workItem from="1757586470178" duration="1133000" />
+      <workItem from="1757602305282" duration="1975000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
