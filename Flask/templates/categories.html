@@ -1,0 +1,30 @@
+<html lang="ru">
+<head>
+  <title>{{categories['name']}}</title>
+</head>
+<body>
+<h1>{{categories['name']}}</h1>
+
+<!-- TODO: выведи все фанфики и их названия, если у фанфика больше 100 лайков
+  Если у фанфика больше 100 лайков, поставь рядом с названием картинку icons8-fire-48.png из папки static"-->
+<ol class="center">
+
+  {% for fanfic in categories['fanfics'] %}
+
+  <li>
+    <h3>{{ fanfic['name'] }}</h3>
+    <p>{{ fanfic['text'] }}</p>
+    <p>Лайков: <b>{{ fanfic['likes'] }}</b></p>
+
+    {% if fanfic['likes']>100 %}
+    <img src="{{ url_for('static', filename='picture/fire_likes.png') }}" alt="Огонь" height="48" width="48">
+    {% else %}
+    <img src="{{ url_for('static', filename='picture/kakashka.png') }}" alt="Какашка" height="48" width="48">
+
+    {% endif %}
+  </li>
+
+  {% endfor %}
+</ol>
+</body>
+</html>
