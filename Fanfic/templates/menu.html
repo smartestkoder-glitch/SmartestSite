@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Меню</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+<div id="upmenu">
+    <a href="/"><img src="{{ url_for('static', filename='photo/FunFanLogo.png') }}" alt="FunFanLogo" class="inl-object" id="funfanlogo" width="240"></a>
+    <a href="/" id="home-link-menu" class="inl-object del-link-style menu-text-link">Главная</a>
+    <a href="/find" class="inl-object del-link-style menu-text-link">Найти</a>
+    <a href="/create" class="inl-object del-link-style menu-text-link">Создать</a>
+    <a href="/info" class="inl-object del-link-style menu-text-link">О платформе</a>
+</div>
+</body>
+</html>

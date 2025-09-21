@@ -1,0 +1,167 @@
+
+#funfanlogo {
+    margin: 25px;
+}
+
+#upmenu {
+    background-color: #7f27ef;
+    margin: 0;
+}
+
+
+
+#this-fanfics {
+    font-size: 96px;
+    padding-top: 128px;
+    padding-bottom: 80px;
+    margin: 0;
+}
+
+#description-home-fanfic {
+    font-size: 48px;
+}
+
+#letsgo-home-fanfic {
+    width: 40vh;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 40px;
+    background-color: #2958ba;
+}
+
+.fanfic-window {
+    border-radius: 60px;
+    width: 140ch;
+    height: auto;
+    background-color: #ffdaa1;
+    margin: 3vw auto 0;
+    font-size: 24px;
+    word-break: break-all;
+}
+
+.edit-fanfic {
+    border-radius: 60px;
+    height: auto;
+    background-color: #ffdaa1;
+    margin: 3vw auto 0;
+    font-size: 24px;
+    word-break: break-all;
+
+}
+.icon {
+    font-variation-settings: 'FILL' 0,
+    'wght' 400,
+    "GRAD" 0,
+    'opsz' 24
+}
+
+
+
+.button-info-fanfic {
+    width: 40vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-radius: 40px;
+    background-color: #2958ba;
+}
+
+#main-text-home-fanfic-div {
+    background-color: #5d1f9f;
+    height: auto;
+    margin-top: 0;
+    color: white;
+}
+#main-text-info-fanfic-div {
+    background-color: #5d1f9f;
+    height: auto;
+    margin-top: 5vh;
+    color: white;
+}
+#letsgo-text {
+    font-size: 80px;
+
+}
+html, body {
+    margin: 0;
+    background-color: #5d1f9f;
+
+}
+.text-white {
+    color: white;
+}
+textarea {
+    resize: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    font-size: 24px;
+    padding: 2px;
+    color: white;
+}
+textarea::-webkit-scrollbar {
+    display: none;
+}
+
+textarea::placeholder {
+    color: #aa9e9e;
+    font-style: italic;
+    font-size: 24px;
+    padding: 2px;
+}
+textarea:focus {
+    outline: none;    /* убираем синюю/фиолетовую рамку */
+    border: none;     /* если не нужен сам бордер */
+}
+
+#search-textarea {
+    width: 60vw;
+    height: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-radius: 40px;
+    background-color: #4d7ad8;
+}
+.inl-object {
+    display: inline-block;   /* элементы в одну строку */
+    vertical-align: middle;  /* выравнивание по вертикали */
+
+}
+
+
+.del-link-style,
+.clean-link:link,
+.clean-link:visited,
+.clean-link:hover,
+.clean-link:active,
+.clean-link:focus {
+    color: inherit;         /* наследует цвет от родителя */
+    text-decoration: none;  /* убирает подчёркивание */
+    cursor: pointer;        /* показывает, что это кликабельный элемент */
+}
+
+#home-link-menu {
+    color: white;
+    font-weight: 999;
+    font-size: 32px;
+    margin-left: 30vh;
+}
+
+.header-info {
+    font-size: 64px;
+}
+.p-info {
+    font-size: 38px;
+    font-weight: 200;
+
+}
+.menu-text-link {
+    color: white;
+    font-weight: 999;
+    font-size: 32px;
+    margin-left: 3vh;
+}
+
+.center {
+    text-align: center;
+}

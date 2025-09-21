@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>FunFan - Твои Любимые Фанфики!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div>{% include 'menu.html' %}</div>
+<div id="main-text-home-fanfic-div">
+    <h1 class="center" id="this-fanfics">Те самые фанфики.</h1>
+    <h2 class="center" id="description-home-fanfic" >Исследуйте мир фанфиков с FunFan!</h2>
+    <div id="letsgo-home-fanfic" class="center">
+        <a class="del-link-style" href="/info">
+            <h2 class="center" id="letsgo-text">Вперёд!</h2>
+        </a>
+    </div>
+</div>
+
+</body>
+</html>

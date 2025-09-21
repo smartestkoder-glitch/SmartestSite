@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>FunFan - Поиск</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+<div>{% include 'menu.html' %}</div>
+<div>
+    <h1 class="header-info text-white center">Найдутся любые фанфики!</h1>
+    <form class="center" action="/search" method="POST">
+        <label>
+            <textarea id="search-textarea" name="user_text" rows="1" cols="80" wrap="off" spellcheck="false"
+                placeholder="Автор или часть текста фанфика..."></textarea>
+        </label>
+        <br>
+    </form>
+    <div>
+        <div id="test-ans" class="center"></div>
+    </div>
+    <script>
+        const textarea = document.getElementById('search-textarea');
+        const answer = document.getElementById('test-ans');
+
+        textarea.addEventListener('input', () => {
+            fetch('/search', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: `user_text=${encodeURIComponent(textarea.value)}`
+            })
+
+                .then(res => {
+                    return res.json()
+                })
+                .then(data => {
+                    const sortFanfics = data.all_data.filter(fanfic =>
+                           fanfic.name.toString().includes(data.search_value.toString())
+                        || fanfic.category.toString().includes(data.search_value.toString())
+                        || fanfic.description.toString().includes(data.search_value.toString())
+                        || fanfic.text.toString().includes(data.search_value.toString())
+                        || fanfic.likes.toString().includes(data.search_value.toString())
+                        || fanfic.author.toString().includes(data.search_value.toString()))//Сортирую тут, а не в python, т.к. JS я знаю лучше, чем Python :)
+                    let inHTML = `<h1 class="center" style="font-size: 48px; color: white">Фанфиков не найдено!</h1>`
+                    if (sortFanfics.length > 0) {inHTML = ``}
+                    for (const fanfic of sortFanfics) {
+                        inHTML += `<div><div class='center fanfic-window inl-object'>
+                                        <div style="font-size: 48px; font-weight: 999">${fanfic.name}</div>
+                                        <div style="font-size: 36px; font-weight: 500">${fanfic.text}</div>
+                                        <div>Автор - ${fanfic.author}</div>
+
+                                    </div>
+
+                                    <div class="inl-object">
+                                        <a href="/edit/${fanfic.id}"><img  src="{{ url_for('static', filename='photo/editLogo.png') }}" class="inl-object" alt="editLogo" width="48" height="48" style="border-radius: 10px; background-color: #ff8026"></a>
+                                        <a href="/delete/${fanfic.id}"><img  src="{{ url_for('static', filename='photo/deleteLogo.png') }}" class="inl-object" alt="editLogo" width="48" height="48" style="border-radius: 10px; background-color: #ff0000"></a>
+                                        <a href="/delete/${fanfic.id}"><img  src="{{ url_for('static', filename='photo/deleteLogo.png') }}" alt="editLogo" width="96" height="48" style="border-radius: 10px; background-color: #ff0000"></a>
+
+                                    </div>
+
+                                    </div>
+                                    `
+
+                    }
+
+                    answer.innerHTML = inHTML
+                });
+        });
+    </script>
+</div>
+</body>
+</html>
