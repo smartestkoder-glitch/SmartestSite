@@ -34,9 +34,37 @@
     width: 140ch;
     height: auto;
     background-color: #ffdaa1;
-    margin: 3vw auto 0;
+    margin: 0;
     font-size: 24px;
     word-break: break-all;
+}
+
+.create-fanfic-header {
+    font-size: 48px;
+    font-weight: 999;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.create-fanfic-textarea {
+
+    color: white;
+    border-radius: 10px;
+    background-color: #2a5298;
+    font-weight: 999;
+}
+
+.button-big-beutiful {
+    margin-top: 30px;
+    font-size: 32px;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-weight: 700;
+    background-color: #0051ff;
+    color: white;
+    border: 0;
+    cursor: pointer;
 }
 
 .edit-fanfic {

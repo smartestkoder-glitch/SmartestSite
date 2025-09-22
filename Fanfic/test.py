@@ -10,28 +10,21 @@ conn = psycopg2.connect(
 
 )
 
-def add_fanfic(name: int, category: int, description: str, text: str, likes: int, author: str):
+def add_likes(id):
+    likesS = 0
+
+    with conn.cursor() as cur:
+        cur.execute("SELECT * FROM fanfics WHERE id=%s;", (id,))
+        rows = cur.fetchall()
+
+        likesS = rows[0][0]
+
+    print(likesS)
+    print(id)
     with conn.cursor() as cur:
         cur.execute(
-            "INSERT INTO fanfics (name, category, description, text, likes, author) VALUES (%s, %s, %s, %s, %s, %s);",
-            (name, category, description, text, likes, author)           # важно: кортеж (title,)
+            "UPDATE fanfics SET likes=%s WHERE id=%s",
+            (likesS, id)           # важно: кортеж (title,)
         )
-        conn.commit()          # фиксируем изменения
-
-def get_all_fanfics():
-    ans = []
-    with conn.cursor() as cur:
-        cur.execute("SELECT * FROM fanfics;")
-        rows = cur.fetchall()
-        for row in rows:
-            ans.append({
-                "name": row[0],
-                "category": row[1],
-                "description": row[2],
-                "text": row[3],
-                "likes": row[4],
-                "author": row[5],
-            })
-    return ans
-#add_fanfic(123, 123, "desc", "text", 111, "author")
-print(get_all_fanfics())
+        conn.commit()
+add_likes(2)

@@ -23,7 +23,57 @@
     <script>
         const textarea = document.getElementById('search-textarea');
         const answer = document.getElementById('test-ans');
+        fetch('/search', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: `user_text=${encodeURIComponent(textarea.value)}`
+        })
 
+            .then(res => {
+                return res.json()
+            })
+            .then(data => {
+                const sortFanfics = data.all_data
+                let inHTML = `<h1 class="center" style="font-size: 48px; color: white">Фанфиков не найдено!</h1>`
+                if (sortFanfics.length > 0) {inHTML = ``}
+                for (const fanfic of sortFanfics) {//А тут дедлайн был вчера, поэтому просто на скорость сделал и html код поэтому писал здесь :(
+                    inHTML += `<div style="margin: 30px"><div class='center fanfic-window inl-object'>
+                            <div style="font-size: 48px; font-weight: 999">${fanfic.name}</div>
+                            <div style="font-size: 36px; font-weight: 500">${fanfic.text}</div>
+                            <div>Автор - ${fanfic.author}</div>
+
+                        </div>
+                        <div class="inl-object icons-f" style="margin-top: 20px">
+                        <div class="block-icon"">
+                            <div>
+                                <a href="/edit/${fanfic.id}"><img  src="{{ url_for('static', filename='photo/editLogo.png') }}" class="inl-object" alt="editLogo" width="48" height="48" style="border-radius: 10px; background-color: #ff8026"></a>
+                                <a href="/delete/${fanfic.id}"><img  src="{{ url_for('static', filename='photo/deleteLogo.png') }}" class="inl-object" alt="deleteLogo" width="48" height="48" style="border-radius: 10px; background-color: #ff0000"></a>
+
+                            </div>
+                            <div style="background-color: #67ff4d; border-radius: 10px; margin: 3px; height: 48px; width: 96px; display: flex; align-items: center; justify-content: flex-start;">
+                                <a href="/like/${fanfic.id}">
+                                <img src="{{ url_for('static', filename='photo/likes.png') }}" alt="fire" width="48" height="48" class="fireorkaka"
+                                    style="border-radius: 10px; background-color: #67ff4d; margin: 0; display: block;">
+                                </a>
+                                <a class="del-link-style" href="/like/${fanfic.id}" style="flex:1; font-size: 24px; text-align:center;"><b>${fanfic.likes}</b></a>
+                            </div>
+                        </div>
+                        </div></div>
+                                    `
+
+                }
+
+
+                answer.innerHTML = inHTML
+                const iconsBlock = document.querySelectorAll(".icons-f")
+                const heightFanficWindow = document.querySelectorAll(".fanfic-window")
+                const blockIcon = document.querySelectorAll(".block-icon")
+                for (let i = 0; i<iconsBlock.length; i++) {
+                    const h = heightFanficWindow[i].offsetHeight;
+                    iconsBlock[i].style.height = h + "px"
+                    //iconsBlock[i].style.width = h + "px"
+                }
+            });
         textarea.addEventListener('input', () => {
             fetch('/search', {
                 method: 'POST',
@@ -45,13 +95,14 @@
                     let inHTML = `<h1 class="center" style="font-size: 48px; color: white">Фанфиков не найдено!</h1>`
                     if (sortFanfics.length > 0) {inHTML = ``}
                     for (const fanfic of sortFanfics) {//А тут дедлайн был вчера, поэтому просто на скорость сделал и html код поэтому писал здесь :(
-                        inHTML += `<div><div class='center fanfic-window inl-object'>
+                        inHTML += `<div style="margin: 30px"><div class='center fanfic-window inl-object'>
                             <div style="font-size: 48px; font-weight: 999">${fanfic.name}</div>
                             <div style="font-size: 36px; font-weight: 500">${fanfic.text}</div>
                             <div>Автор - ${fanfic.author}</div>
 
                         </div>
-                        <div class="inl-object">
+                        <div class="inl-object icons-f" style="margin-top: 20px">
+                        <div class="block-icon"">
                             <div>
                                 <a href="/edit/${fanfic.id}"><img  src="{{ url_for('static', filename='photo/editLogo.png') }}" class="inl-object" alt="editLogo" width="48" height="48" style="border-radius: 10px; background-color: #ff8026"></a>
                                 <a href="/delete/${fanfic.id}"><img  src="{{ url_for('static', filename='photo/deleteLogo.png') }}" class="inl-object" alt="editLogo" width="48" height="48" style="border-radius: 10px; background-color: #ff0000"></a>
@@ -59,11 +110,12 @@
                             </div>
                             <div style="background-color: #67ff4d; border-radius: 10px; margin: 3px; height: 48px; width: 96px; display: flex; align-items: center; justify-content: flex-start;">
                                 <a href="/like/${fanfic.id}">
-                                <img src="{{ url_for('static', filename='photo/fire_likes.png') }}" alt="fire" width="48" height="48" class="fireorkaka"
+                                <img src="{{ url_for('static', filename='photo/likes.png') }}" alt="fire" width="48" height="48" class="fireorkaka"
                                     style="border-radius: 10px; background-color: #67ff4d; margin: 0; display: block;">
                                 </a>
                                 <a class="del-link-style" href="/like/${fanfic.id}" style="flex:1; font-size: 24px; text-align:center;"><b>${fanfic.likes}</b></a>
                             </div>
+                        </div>
                         </div></div>
                                     `
 
@@ -71,9 +123,14 @@
 
 
                     answer.innerHTML = inHTML
-                    document.querySelectorAll(".fireorkaka").forEach(el => {
-                        el.src = "{{ url_for('static', filename='photo/kakashka.png') }}"
-                    });
+                    const iconsBlock = document.querySelectorAll(".icons-f")
+                    const heightFanficWindow = document.querySelectorAll(".fanfic-window")
+                    const blockIcon = document.querySelectorAll(".block-icon")
+                    for (let i = 0; i<iconsBlock.length; i++) {
+                        const h = heightFanficWindow[i].offsetHeight;
+                        iconsBlock[i].style.height = h + "px"
+                        //iconsBlock[i].style.width = h + "px"
+                    }
                 });
         });
     </script>

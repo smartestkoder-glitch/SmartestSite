@@ -6,38 +6,38 @@
 </head>
 <body>
 <div>{% include 'menu.html' %}</div>
-<form class="center" action="/create" method="POST">
+<form class="center" action="/edit/{{ id }}" method="POST">
     <label>
-            <p class="create-fanfic-header">Название</p>
-            <textarea class="create-fanfic-textarea" id="add-fanfic-name" name="name_fanfic" rows="1" cols="80" spellcheck="false"
-                      placeholder="Про что ваш фанфик?"></textarea>
+        <p class="create-fanfic-header">Название</p>
+        <textarea class="create-fanfic-textarea" id="add-fanfic-name" name="name_fanfic" rows="1" cols="80" spellcheck="false"
+                  placeholder="Про что ваш фанфик?">{{ name }}</textarea>
     </label>
     <br>
     <label>
         <p class="create-fanfic-header">Текст</p>
         <textarea class="create-fanfic-textarea" id="add-fanfic-text" name="text_fanfic" rows="10" cols="80" spellcheck="false"
-                  placeholder="Изложите свои фантазии здесь!"></textarea>
+                  placeholder="Изложите свои фантазии здесь!">{{ text }}</textarea>
     </label>
     <br>
     <label>
         <p class="create-fanfic-header">Автор</p>
         <textarea class="create-fanfic-textarea" id="add-fanfic-author" name="author_fanfic" rows="1" cols="80" spellcheck="false"
-                  placeholder="Как вас зовут?"></textarea>
+                  placeholder="Как вас зовут?">{{ author }}</textarea>
     </label>
     <br>
     <label>
         <p class="create-fanfic-header">Описание</p>
         <textarea class="create-fanfic-textarea" id="add-fanfic-description" name="description_fanfic" rows="3" cols="80" spellcheck="false"
-                  placeholder="Опционально, влияет только на поиск. Можете сюда написать ключевые слова фанфика"></textarea>
+                  placeholder="Опционально, влияет только на поиск. Можете сюда написать ключевые слова фанфика">{{ description }}</textarea>
     </label>
     <br>
     <label>
         <p class="create-fanfic-header">Категория</p>
         <textarea class="create-fanfic-textarea" id="add-fanfic-category" name="category_fanfic" rows="1" cols="80" spellcheck="false"
-                  placeholder="Опционально, влияет только на поиск. Можете сюда написать жанр/категорию фанфика"></textarea>
+                  placeholder="Опционально, влияет только на поиск. Можете сюда написать жанр/категорию фанфика">{{ category }}</textarea>
     </label>
     <br>
-    <button type="submit" class="button-big-beutiful">Создать!</button>
+    <button type="submit" class="button-big-beutiful">Изменить</button>
 
 
     <br>
