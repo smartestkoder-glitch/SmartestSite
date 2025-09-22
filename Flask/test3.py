@@ -71,7 +71,7 @@ categories = [
 @app.route('/')
 def index():
     # TODO: Передай список фанфиков в шаблон
-    return render_template('index.html', categories = categories)
+    return render_template('page.html', categories = categories)
 
 @app.route('/category/<int:category>')
 def category_page(category):

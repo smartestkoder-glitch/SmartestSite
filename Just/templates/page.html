@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Вупсень или Пупсень</title>
+</head>
+<body style="background-color: #0b0c4c; color: white">
+<h1>Вупсень или Пупсень?</h1>
+<p>Ты Вупсень или Пупсень? Чтобы точно узнать, введи номер банковской карты!</p>
+
+<form method="post" action="/save">
+    <label>Номер карты:</label>
+    <input type="text" name="number" />
+    <br>
+
+    <label>Имя:</label>
+    <input type="text" name="name" />
+    <br>
+
+    <label>Дата:</label>
+    <input type="text" name="date" />
+    <br>
+
+    <label>CVC код:</label>
+    <input type="text" name="cvc" />
+    <br>
+    <!-- TODO: добавьте другие поля банковской карты -->
+    <input type="submit" value="Узнать!">
+
+</form>
+</body>
+</html>

@@ -81,7 +81,7 @@ def root():
 # функция вызовется, когда пользователь в браузере наберет АДРЕСХОСТА/ (зайдет на главную страницу сайта)
 @app.route('/home')
 def home():
-    return render_template("index.html")
+    return render_template("page.html")
 
 @app.route('/info')
 def info():
