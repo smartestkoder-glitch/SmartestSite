@@ -161,8 +161,5 @@ def edit_fanfic_site(id):
 
 
 
-@app.route('/test')
-def test():
-    return render_template("test.html")
 
 app.run(debug=True)
