@@ -127,7 +127,7 @@ def add_fanfic_site():
     category_fanfic = request.form.get("category_fanfic")
     #redirect(url_for("find"))
     print(str(name_fanfic), str(category_fanfic), str(description_fanfic), str(text_fanfic), 0, str(author_fanfic))
-    if not name_fanfic and not text_fanfic and not author_fanfic: return render_template("redirect_to_find_alert.html", message="Вы не указали обязательное(ые) поле(я)!")
+    if len(name_fanfic)<1 or len(text_fanfic)<1 or len(author_fanfic)<1 or len(category_fanfic)<1: return render_template("redirect_to_find_alert.html", message="Вы не указали обязательное(ые) поле(я)!")
     else:
         try:
             add_fanfic(str(name_fanfic), str(category_fanfic), str(description_fanfic), str(text_fanfic), 0, str(author_fanfic))
@@ -143,8 +143,8 @@ def edit_fanfic_site_confirm(id):
     description_fanfic = request.form.get("description_fanfic")
     category_fanfic = request.form.get("category_fanfic")
     #redirect(url_for("find"))
-    print(str(name_fanfic), str(category_fanfic), str(description_fanfic), str(text_fanfic), 0, str(author_fanfic))
-    if not name_fanfic and not text_fanfic and not author_fanfic: return render_template("redirect_to_find_alert.html", message="Вы не указали обязательное(ые) поле(я)!")
+    print(name_fanfic, category_fanfic, description_fanfic, text_fanfic, 0, author_fanfic)
+    if len(name_fanfic)<1 or len(text_fanfic)<1 or len(author_fanfic)<1 or len(category_fanfic)<1: return render_template("redirect_to_find_alert.html", message="Вы не указали обязательное(ые) поле(я)!")
     else:
         try:
             edit_fanfic(id, str(name_fanfic), str(category_fanfic), str(description_fanfic), str(text_fanfic), str(author_fanfic))
