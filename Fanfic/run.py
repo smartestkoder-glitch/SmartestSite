@@ -68,6 +68,7 @@ def send_text():
             "search_value": user_text,
             "all_data": get_all_fanfics()
         })
-
-
+@app.route('/test')
+def test():
+    return render_template("test.html")
 app.run(debug=True)

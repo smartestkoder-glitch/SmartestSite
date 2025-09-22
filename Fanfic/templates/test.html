@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div><div class='center fanfic-window inl-object'>
+    <div style="font-size: 48px; font-weight: 999">${fanfic.name}</div>
+    <div style="font-size: 36px; font-weight: 500">${fanfic.text}</div>
+    <div>Автор - ${fanfic.author}</div>
+
+</div>
+
+    <div>
+        <a href="/edit/${fanfic.id}"><img  src="{{ url_for('static', filename='photo/editLogo.png') }}" class="inl-object" alt="editLogo" width="48" height="48" style="border-radius: 10px; background-color: #ff8026"></a>
+        <a href="/delete/${fanfic.id}"><img  src="{{ url_for('static', filename='photo/deleteLogo.png') }}" class="inl-object" alt="editLogo" width="48" height="48" style="border-radius: 10px; background-color: #ff0000"></a>
+
+    </div>
+    <a href="/delete/${fanfic.id}"><img  src="{{ url_for('static', filename='photo/deleteLogo.png') }}" alt="editLogo" width="96" height="48" style="border-radius: 10px; background-color: #ff0000"></a>
+
+</div>
+</body>
+</html>
