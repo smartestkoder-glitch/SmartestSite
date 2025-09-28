@@ -2,7 +2,7 @@ from flask import Flask, url_for, redirect, request, jsonify, flash
 from flask import render_template
 import psycopg2
 
-conn = psycopg2.connect(#Моя бдшка, убедительная просьба не ломать :) P.S: я только под конец понял, что можно было использовать ORM(sqlalchemy). Так что использовал psycopg2
+conn = psycopg2.connect(
     host="103.88.241.137",
     database="fanfics",
     user="gen_user",
@@ -78,7 +78,7 @@ app = Flask(__name__)
 @app.route("/")
 def root():
     return redirect(url_for("home"))
-# функция вызовется, когда пользователь в браузере наберет АДРЕСХОСТА/ (зайдет на главную страницу сайта)
+
 @app.route('/home')
 def home():
     return render_template("page.html")

@@ -1,0 +1,39 @@
+
+<head>
+    {% include "includes.html" %}
+    <script src="{{ url_for('static', filename='script/register.js') }}"></script>
+</head>
+
+<div class="center-text auth-window">
+    <h1 class="center-text">Регистрация</h1>
+    <form class="center" id="reg-form" action="/register" method="POST">
+        <label>
+            <textarea onkeydown="if(event.key === 'Enter'){event.preventDefault();}" class="auth-textarea" name="name" rows="1" spellcheck="false"
+                      placeholder="Введите своё имя"></textarea>
+        </label>
+        <br>
+
+        <label>
+            <textarea onkeydown="if(event.key === 'Enter'){event.preventDefault();}" class="auth-textarea" name="login" rows="1" spellcheck="false"
+                      placeholder="Придумайте логин"></textarea>
+        </label>
+        <br>
+
+        <label>
+            <input type="password" class="auth-input-pass" name="pass" spellcheck="false"
+                      placeholder="Придумайте пароль" >
+        </label>
+        <br>
+
+        <label>
+            <textarea onkeydown="if(event.key === 'Enter'){event.preventDefault();}" class="auth-textarea" name="email" rows="1" spellcheck="false"
+                      placeholder="Введите почту"></textarea>
+        </label>
+        <br>
+
+        <button type="button" onclick="register()" class="btn btn-primary auth-button">Зарегистрироваться</button>
+        <br>
+        <a href="/login">Уже есть аккаунт? Войти</a>
+
+    </form>
+</div>

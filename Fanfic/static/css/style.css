@@ -190,6 +190,10 @@ textarea:focus {
     margin-left: 3vh;
 }
 
-.center {
+.center-text {
     text-align: center;
+}
+
+.margin-auto {
+    margin: auto;
 }

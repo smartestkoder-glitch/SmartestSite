@@ -1,0 +1,26 @@
+
+<head>
+    {% include "includes.html" %}
+    <script src="{{ url_for('static', filename='script/login.js') }}"></script>
+</head>
+
+<div class="center-text auth-window">
+    <h1 class="center-text">Вход</h1>
+    <form class="center" id="login-form" action="/login" method="POST">
+        <label>
+            <textarea onkeydown="if(event.key === 'Enter'){event.preventDefault();}" class="auth-textarea" name="login" rows="1" spellcheck="false"
+                      placeholder="Введите логин"></textarea>
+        </label>
+        <br>
+
+        <label>
+            <input type="password" class="auth-input-pass" name="pass" spellcheck="false"
+                      placeholder="Введите пароль" >
+        </label>
+        <br>
+        <button type="button" onclick="login1()" class="btn btn-primary auth-button">Войти</button>
+        <br>
+        <a href="/register">Нет аккаунта? Создать</a>
+
+    </form>
+</div>

@@ -1,0 +1,202 @@
+
+/* region SmartWarn */
+.smart-warn {
+    width: 25vw;
+    margin-left: 75vw;
+    font-weight: 700;
+}
+
+/* endregion */
+
+/* region Регистрация и Логин */
+
+.auth-window {
+
+    height: auto;
+
+
+    background-color: #ffffff;
+
+    border-radius: 30px;
+    border: 1px solid #000000;
+
+}
+
+
+
+.main-auth {
+    width: 25vw;
+    height: 75vh;
+    padding-top: 15vh;
+}
+
+.auth-button {
+    margin-bottom: 2vh;
+}
+
+/* region Лого + текст при входе/реге НАД окном регистрации*/
+.main-auth-logo {
+    width: 25vw;
+    height: auto;
+}
+
+.main-auth-logo-img {
+    width: 64px;
+    height: 64px;
+}
+
+
+/* endregion */
+
+/* region Настройки полей ввода */
+
+.auth-input-pass {
+    width: 23vw;
+    height: 5vh;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+
+    padding-left: 0.4vw;
+
+}
+.auth-input-pass:focus {
+    outline-color: #4d7ad8;
+    background-color: #d5e2fd;
+}
+.auth-input-pass::placeholder {
+    color: #aa9e9e;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 500;
+
+}
+
+
+.auth-textarea {
+    border: 2px solid #ccc;
+
+    padding-left: 0.4vw;
+    padding-top: 1.25vh;
+    width: 23vw;
+    height: 5vh;
+    resize: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    font-size: 16px;
+    color: black;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    border-radius: 10px;
+}
+.auth-textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.auth-textarea::placeholder {
+    color: #aa9e9e;
+    font-style: italic;
+    font-size: 16px;
+
+    font-weight: 500;
+
+}
+.auth-textarea:focus {
+    outline-color: #4d7ad8;
+    background-color: #d5e2fd;
+}
+/* endregion */
+
+
+
+/* endregion */
+
+
+
+/* region Меню */
+
+.plus-photo {
+    border: 3px solid white;
+    border-radius: 50px;
+    margin-left: 0.5vw;
+}
+
+.main-menu {
+    border: 0 solid black;
+}
+
+.search-block {
+    margin-left: 10vw;
+    border: 0 solid black;
+    border-radius: 10px;
+    padding: 0 0 0 0.5vw;
+    background-color: #ffffff;
+}
+
+
+.search-input {
+    width: 23vw;
+    height: 5vh;
+    border-radius: 10px;
+    border: 0 solid #ccc;
+
+
+    padding-left: 0.4vw;
+
+}
+.search-input:focus {
+    outline: none;
+}
+.search-input::placeholder {
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 500;
+
+}
+
+
+
+/* endregion */
+
+
+
+/* region Главная */
+
+
+
+/* endregion */
+
+
+
+/* region Создание и Изменение */
+
+
+
+/* endregion */
+
+
+.inl-object {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.margin-auto {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.all-wind-div {
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.main-back-color {
+    background-color: rgba(1, 3, 11, 0.89);
+}

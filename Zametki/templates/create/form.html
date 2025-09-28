@@ -1,0 +1,16 @@
+<head>
+    {% include "includes.html" %}
+</head>
+<form id="create-form" action="/create" method="POST">
+    <label>
+            <textarea onkeydown="if(event.key === 'Enter'){event.preventDefault();}" class="auth-textarea" name="name" rows="1" spellcheck="false"
+                      placeholder="Введите своё имя"></textarea>
+    </label>
+    <br>
+
+
+    <button type="button" onclick="register()" class="btn btn-primary auth-button">Зарегистрироваться</button>
+    <br>
+    <a href="/login">Уже есть аккаунт? Войти</a>
+
+</form>

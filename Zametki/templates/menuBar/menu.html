@@ -1,0 +1,19 @@
+<head>
+    {% include "includes.html" %}
+</head>
+<div class="main-menu col-12">
+    <a href="/"><img class="inl-object" src="{{ url_for('static', filename='photo/logoWithText.png')}}"
+                     alt="Лого Черное" height="96" width="350"></a>
+    <div class="center-text inl-object">
+        <div class="inl-object search-block">
+            <img class="inl-object" src="{{ url_for('static', filename='photo/search.png')}}" alt="Лупа" height="24"
+                 width="24">
+            <input class="inl-object search-input" placeholder="Найти">
+        </div>
+        <div class="inl-object plus-photo" role="button" data-bs-toggle="modal" data-bs-target="#myModal">
+            <img src="{{ url_for('static', filename='photo/plus_white.png')}}" alt="Плюс белый" height="36"
+                 width="36">
+        </div>
+    </div>
+
+</div>
