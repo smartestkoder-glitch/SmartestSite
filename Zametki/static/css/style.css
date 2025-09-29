@@ -64,7 +64,7 @@
 }
 .auth-input-pass:focus {
     outline-color: #4d7ad8;
-    background-color: #d5e2fd;
+    background-color: #e3eeff;
 }
 .auth-input-pass::placeholder {
     color: #aa9e9e;
@@ -105,7 +105,7 @@
 }
 .auth-textarea:focus {
     outline-color: #4d7ad8;
-    background-color: #d5e2fd;
+    background-color: #e3eeff;
 }
 /* endregion */
 

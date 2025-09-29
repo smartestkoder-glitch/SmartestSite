@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Цветосайт</title>
+</head>
+<body style=" background-color: {{ backColor }};">
+<form action="/change" method="POST" style="font-size: {{ fontSize }}; color: {{ fontColor }};">
+    <label>
+        <p class="header-input">Цвет фона</p>
+        <textarea id="back-color-inp" name="back-color" rows="1" cols="80" spellcheck="false"
+                  placeholder="#777777"></textarea>
+    </label>
+    <br>
+    <label>
+        <p class="header-input">Размер шрифта</p>
+        <textarea id="font-size-inp" name="font-size" rows="1" cols="80" spellcheck="false"
+                  placeholder="32px"></textarea>
+    </label>
+    <br>
+    <label>
+        <p class="header-input">Цвет шрифта</p>
+        <textarea id="font-color-inp" name="font-color" rows="1" cols="80" spellcheck="false"
+                  placeholder="#777777"></textarea>
+    </label>
+    <br>
+    <button type="submit" class="button-big-beutiful">Подтвердить изменения</button>
+
+
+    <br>
+</form>
+</body>
+</html>

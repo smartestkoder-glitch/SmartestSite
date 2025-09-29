@@ -28,6 +28,23 @@ def home():
     return render_template("home/index.html")
 
 
+# region Создание
+
+@app.route("/create", methods=["POST"])
+def create():
+    nameNote = request.form.get("name-zametki")
+    textNote = request.form.get("text-zametki")
+
+    username = session.get("username")
+    if not username:
+        return redirect(url_for("login"))
+    user = Database.User.Get.one_username(connect, username)
+
+    Database.Notes.add(connect, user["id"], nameNote, textNote)
+    print("13")
+    return redirect(url_for("home"))
+# endregion
+
 
 # region Вход
 

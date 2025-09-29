@@ -1,16 +1,21 @@
 <head>
     {% include "includes.html" %}
+    <script src="{{ url_for('static', filename='script/create.js') }}"></script>
+
 </head>
 <form id="create-form" action="/create" method="POST">
     <label>
-            <textarea onkeydown="if(event.key === 'Enter'){event.preventDefault();}" class="auth-textarea" name="name" rows="1" spellcheck="false"
-                      placeholder="Введите своё имя"></textarea>
+            <textarea onkeydown="if(event.key === 'Enter'){event.preventDefault();}" maxlength="36" class="auth-textarea" name="name-zametki" rows="1" spellcheck="false"
+                      placeholder="Введите название заметки"></textarea>
     </label>
     <br>
 
-
-    <button type="button" onclick="register()" class="btn btn-primary auth-button">Зарегистрироваться</button>
+    <label>
+            <textarea style="height: 30vh" class="auth-textarea" name="text-zametki" spellcheck="false"
+                      placeholder="Введите текст заметки"></textarea>
+    </label>
     <br>
-    <a href="/login">Уже есть аккаунт? Войти</a>
+    <button type="button" onclick="create()" class="btn btn-primary auth-button">Создать</button>
+    <br>
 
 </form>
